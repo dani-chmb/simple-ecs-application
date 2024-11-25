@@ -50,7 +50,7 @@ jobs:
 
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
-        uses: dani-chmb/amazon-ecs-render-task-definition@f1de9bd8c98a5049d36dbf7c7c24718ab12b06de
+        uses: dani-chmb/amazon-ecs-render-task-definition@5c5a0c7b07b3328d676db3f9e364b656fbb0a7df
         with:
           task-definition: .aws/task-definition.json
           container-name: "app"
