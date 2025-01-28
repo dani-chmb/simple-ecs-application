@@ -59,7 +59,7 @@ jobs:
       #       TOKEN=123
 
       - name: Deploy ECS task definition to ECS Service
-        uses: amazreech/reechak-amazon-ecs-deploy-task-definition@fdaf2face703ba89118db2567aec8a28ecddc7ea
+        uses: amazreech/reechak-amazon-ecs-deploy-task-definition@ce2b2bd4e8452f8cd5edc36e92b155d88f90a674
         with:
           # task-definition: ${{ steps.task-def.outputs.task-definition }}
           task-definition: .aws/task-definition.json
