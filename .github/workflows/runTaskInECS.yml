@@ -8,8 +8,7 @@ on: workflow_dispatch
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: github-actions-repo
-  ECS_SERVICE: github-actions-service
-  ECS_CLUSTER: Github-Actions-Cluster
+  ECS_CLUSTER: GitHubActions-RunTask
   ECS_TASK_DEFINITION: .aws/task-definition.json
   CONTAINER_NAME: "app"
   ENV: "dev"
