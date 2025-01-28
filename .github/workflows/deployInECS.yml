@@ -59,7 +59,7 @@ jobs:
       #       TOKEN=123
 
       - name: Deploy ECS task definition to ECS Service
-        uses: amazreech/reechak-amazon-ecs-deploy-task-definition@00a66514d82b40cc3288414c615a12d828239aa6
+        uses: amazreech/reechak-amazon-ecs-deploy-task-definition@056f2736ee14f12266aa001e7683bb099a47bb4c
         with:
           # task-definition: ${{ steps.task-def.outputs.task-definition }}
           task-definition: .aws/task-definition.json
@@ -67,5 +67,5 @@ jobs:
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
           service-managed-ebs-volume-name: "ebs1"
-          service-managed-ebs-volume: '{"filesystemType":"xfs","roleArn":"arn:aws:iam::413216369237:role/github-actions-setup-stack-EBSRole-YwVmgS4g7gQE","encrypted":"false","sizeInGiB":"20"}'
+          service-managed-ebs-volume: '{"filesystemType":"xfs","roleArn":"arn:aws:iam::413216369237:role/github-actions-setup-stack-EBSRole-YwVmgS4g7gQE","encrypted":"false","sizeInGiB":"30"}'
     
