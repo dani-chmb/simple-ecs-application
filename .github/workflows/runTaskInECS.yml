@@ -51,7 +51,7 @@ jobs:
       - name: Deploy ECS task definition to ECS Service - Run Task
         uses: amazreech/reechak-amazon-ecs-deploy-task-definition@d83db92773ac536c7ab3185086466fa3851357fa
         with:
-          task-definition: .aws/task-definition.json
+          task-definition: .aws/task-definition-run-task.json
           cluster: ${{ env.ECS_CLUSTER }}
           run-task: true
           run-task-launch-type: EC2
