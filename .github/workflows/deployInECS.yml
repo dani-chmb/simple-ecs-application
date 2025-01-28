@@ -58,7 +58,7 @@ jobs:
       #     environment-variables: |
       #       TOKEN=123
 
-      - name: Deploy Amazon ECS task definition
+      - name: Deploy ECS task definition to ECS Service
         uses: amazreech/reechak-amazon-ecs-deploy-task-definition@8fc0092121f9abfc9adae51149047b3898304aed
         with:
           # task-definition: ${{ steps.task-def.outputs.task-definition }}
