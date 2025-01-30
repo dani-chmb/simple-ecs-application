@@ -66,6 +66,8 @@ jobs:
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
+          wait-for-service-stability: true
+          enable-ecs-managed-tags: true
           service-managed-ebs-volume-name: "ebs1"
           service-managed-ebs-volume: '{"filesystemType":"xfs","roleArn":"arn:aws:iam::413216369237:role/github-actions-setup-stack-EBSRole-YwVmgS4g7gQE","encrypted":false,"sizeInGiB":30}'
     
