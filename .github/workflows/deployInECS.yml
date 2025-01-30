@@ -11,7 +11,7 @@ env:
   #ECS_SERVICE: test-two-service
   ECS_SERVICE: github-actions-service
   ECS_CLUSTER: Github-Actions-Cluster
-  ECS_TASK_DEFINITION: .aws/task-definition.json
+  ECS_TASK_DEFINITION: .aws/test-volume-configuration-service.json
   CONTAINER_NAME: "app"
   ENV: "dev"
 
@@ -63,10 +63,9 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@0bad458c6aa901707e510cd05b797b05da075633
         with:
           # task-definition: ${{ steps.task-def.outputs.task-definition }}
-          task-definition: .aws/test-volume-configuration-service.json
+          task-definition: ${{ env.ECS_TASK_DEFINITION }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
-          enable-ecs-managed-tags: true
           # service-managed-ebs-volume-name: "ebs1"
           # service-managed-ebs-volume: '{"filesystemType":"xfs","roleArn":"arn:aws:iam::413216369237:role/github-actions-setup-stack-EBSRole-YwVmgS4g7gQE","encrypted":false,"sizeInGiB":30}'
     
