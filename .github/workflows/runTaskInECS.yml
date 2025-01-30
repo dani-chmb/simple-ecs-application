@@ -54,7 +54,7 @@ jobs:
           cluster: ${{ env.ECS_CLUSTER }}
           run-task: true
           run-task-managed-ebs-volume-name: "ebs1"
-          run-task-managed-ebs-volume: '{"filesystemType":"xfs","roleArn":"arn:aws:iam::413216369237:role/github-actions-setup-stack-EBSRole-YwVmgS4g7gQE","encrypted":false,"sizeInGiB":30}'
+          run-task-managed-ebs-volume: '{"filesystemType":"xfs","roleArn":"arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID}}:role/github-actions-setup-stack-EBSRole-YwVmgS4g7gQE","encrypted":false,"sizeInGiB":30}'
           run-task-started-by: "GitHub-Actions-EBS-Test"
           wait-for-task-stopped: true
           run-task-subnets: subnet-0510b4fdf362d0462, subnet-0a5ed7522c4980666
