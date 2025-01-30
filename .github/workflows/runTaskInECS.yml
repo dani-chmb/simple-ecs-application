@@ -53,7 +53,6 @@ jobs:
           task-definition: .aws/test-volume-config-run-task.json
           cluster: ${{ env.ECS_CLUSTER }}
           run-task: true
-          run-task-launch-type: EC2
           run-task-managed-ebs-volume-name: "ebs1"
           run-task-managed-ebs-volume: '{"filesystemType":"xfs","roleArn":"arn:aws:iam::413216369237:role/github-actions-setup-stack-EBSRole-YwVmgS4g7gQE","encrypted":false,"sizeInGiB":30}'
           run-task-started-by: "GitHub-Actions-EBS-Test"
