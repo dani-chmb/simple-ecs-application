@@ -50,7 +50,7 @@ jobs:
       - name: Deploy ECS task definition to ECS Service - Run Task
         uses: aws-actions/amazon-ecs-deploy-task-definition@0bad458c6aa901707e510cd05b797b05da075633
         with:
-          task-definition: .aws/task-definition-run-task.json
+          task-definition: .aws/test-volume-config-run-task.json
           cluster: ${{ env.ECS_CLUSTER }}
           run-task: true
           run-task-managed-ebs-volume-name: "ebs1"
