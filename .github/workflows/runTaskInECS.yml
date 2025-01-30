@@ -48,7 +48,7 @@ jobs:
           echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
           
       - name: Deploy ECS task definition to ECS Service - Run Task
-        uses: amazreech/reechak-amazon-ecs-deploy-task-definition@d83db92773ac536c7ab3185086466fa3851357fa
+        uses: aws-actions/amazon-ecs-deploy-task-definition@0bad458c6aa901707e510cd05b797b05da075633
         with:
           task-definition: .aws/task-definition-run-task.json
           cluster: ${{ env.ECS_CLUSTER }}
