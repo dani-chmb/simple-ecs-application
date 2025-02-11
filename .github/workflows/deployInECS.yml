@@ -11,7 +11,7 @@ env:
   ECS_SERVICE: test-two-service
   #ECS_SERVICE: github-actions-service
   ECS_CLUSTER: Github-Actions-Cluster
-  ECS_TASK_DEFINITION: .aws/test-volume-configuration-service.json
+  ECS_TASK_DEFINITION: .aws/fargate-task-def.json.json
   CONTAINER_NAME: "app"
   ENV: "dev"
 
