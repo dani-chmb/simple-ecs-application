@@ -60,7 +60,7 @@ jobs:
       #       TOKEN=123
 
       - name: Deploy ECS task definition to ECS Service
-        uses: dani-chmb/amazon-ecs-deploy-task-definition@ec4a802b280535b4fad2291ae0573b0c480b8b22
+        uses: dani-chmb/amazon-ecs-deploy-task-definition@260033671b6154bdd08259de53368e4b25c0c467
         with:
           # task-definition: ${{ steps.task-def.outputs.task-definition }}
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
