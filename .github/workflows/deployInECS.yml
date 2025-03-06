@@ -6,7 +6,7 @@ name: Deploy to Amazon ECS
 on: workflow_dispatch
 
 env:
-  AWS_REGION: us-east-1
+  AWS_REGION: us-west-2
   ECR_REPOSITORY: github-actions-repo
   ECS_SERVICE: test-two-service
   #ECS_SERVICE: github-actions-service
